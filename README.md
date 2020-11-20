@@ -1,5 +1,5 @@
 # Run lights on Rpi 4
-* Plug lights starting at GPIO 10
+* Plug in lights starting at GPIO 10
 * Boot machine, SSH into it
 * Install Docker
 * Clone this repo
