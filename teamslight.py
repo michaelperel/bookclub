@@ -1,4 +1,4 @@
-from time import time
+from time import time,sleep
 from RPi import GPIO
 from flask import Flask, json, request
 from urllib.parse import urlparse, parse_qs
@@ -62,7 +62,7 @@ def threaded_task():
         if lastAwayTime != 0 and time() - lastAwayTime > 300:
             set_light_color('OFF')
             lastAwayTime = 0
-        time.sleep(5)
+        sleep(5)
 
 def init_color_board():
     GPIO.setmode(GPIO.BCM)
