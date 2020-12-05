@@ -8,7 +8,7 @@
 * `docker run -it --rm -v /dev:/dev --privileged lights`
 
 ## Simple Teams Light that does not use AAD or Graph API. 
-Run *teamslight.py* on the Raspberry Pi with the Traffic light plugged in. Note the IP address of the Raspberry Pi and use it below. 
+Run *teamslight.py* on the Raspberry Pi with the Traffic light plugged in. Note the IP address of the Raspberry Pi and set it to the *host* variable and also use it below. 
 
 Run *teamslogwatch.py* on your laptop where the Teams client is running. 
 - Look in the Teams settings for the location of the log file and update the variable *teams_logfile* in this file before running it. 
