@@ -33,6 +33,12 @@ if __name__ == '__main__':
             statusdata = {'status' : status}
             headers = {'Content-Type' : 'application/json'}
             print('Calling teams light API with ' + status)
-            response = requests.put(pi_url + "/teamsstatus?status=" + status)
-            print(response)
+            while(True):
+                try:
+                    response = requests.put(pi_url + "/teamsstatus?status=" + status)
+                    print(response)
+                    break
+                except:
+                    print('Retrying connection to ' + pi_url)
+                    time.sleep(5)
 
