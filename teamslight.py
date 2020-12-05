@@ -5,7 +5,8 @@ from urllib.parse import urlparse, parse_qs
 from threading import Thread
 
 # Connect the Traffic light module to the Pi - I/O 9,10,11
-
+# Put the IP address of your Raspberry Pi here
+host = 192.168.1.206
 lastAwayTime = 0
 
 def set_light_color(color):
@@ -84,7 +85,7 @@ thread.daemon = True
 thread.start()
 
 try:
-    api.run(port=8080, host='0.0.0.0')
+    api.run(port=8080, host=host)
 finally:
     print('Cleaning up GPIO ...')
     GPIO.cleanup()
