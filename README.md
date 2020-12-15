@@ -20,3 +20,4 @@ Run *teamslogwatch.py* on your laptop where the Teams client is running.
 - This will watch the log file for changes and parse it looking for status updates. After parsing the status, it will call the API on the Pi to PUT the status. 
 - Note that this was tested using Teams version 1.3.00.33674.
 - Also update the variable *pi_url* with the IP address of the Raspberry Pi from above. 
+- This approach was only tested on Windows. 
